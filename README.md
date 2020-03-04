@@ -19,10 +19,15 @@ We implemented the following functions:
 
 - city_risk: returns the number of strong earthquakes (magnitude > 5, depth < 70 km) that happened between time_start and time_end at distance at most R from the city. To compute the distance d between two points given their longitude and latitude, use the harvesine formula:
 
-![formula](https://render.githubusercontent.com/render/math?math=a = \sin^2(\Delta \phi / 2) + \cos (\phi_1) \times \cos(\phi_2) \times \sin^2 (\Delta \lambda /2))
+![a = \sin^2(\Delta \phi / 2) + \cos (\phi_1) \times \cos(\phi_2) \times \sin^2 (\Delta \lambda /2) ](https://render.githubusercontent.com/render/math?math=a%20%3D%20%5Csin%5E2(%5CDelta%20%5Cphi%20%2F%202)%20%2B%20%5Ccos%20(%5Cphi_1)%20%5Ctimes%20%5Ccos(%5Cphi_2)%20%5Ctimes%20%5Csin%5E2%20(%5CDelta%20%5Clambda%20%2F2)%20)
+
+![c = 2 \times \arctan( \sqrt(a), \sqrt(1-a))](https://render.githubusercontent.com/render/math?math=c%20%3D%202%20%5Ctimes%20%5Carctan(%20%5Csqrt(a)%2C%20%5Csqrt(1-a)))
+
+![d = R \times c](https://render.githubusercontent.com/render/math?math=d%20%3D%20R%20%5Ctimes%20c)
+
 
 $ a = \sin^2(\Delta \phi / 2) + \cos (\phi_1) \times \cos(\phi_2) \times \sin^2 (\Delta \lambda /2) \\
 c = 2 \times \arctan( \sqrt(a), \sqrt(1-a) \\
 d = R \times c $
 
-where $\phi_1$ and $\phi_2$ are the latitudes, $\Delta \lambda$ is the difference between longitutdes and $R$ is the earth's radius. 
+where phi_1 and phi_2 are the latitudes, $\Delta \lambda$ is the difference between longitutdes and $R$ is the earth's radius. 
