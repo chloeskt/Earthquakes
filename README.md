@@ -19,6 +19,8 @@ We implemented the following functions:
 
 - city_risk: returns the number of strong earthquakes (magnitude > 5, depth < 70 km) that happened between time_start and time_end at distance at most R from the city. To compute the distance d between two points given their longitude and latitude, use the harvesine formula:
 
+![formula](https://render.githubusercontent.com/render/math?math=a = \sin^2(\Delta \phi / 2) + \cos (\phi_1) \times \cos(\phi_2) \times \sin^2 (\Delta \lambda /2))
+
 $ a = \sin^2(\Delta \phi / 2) + \cos (\phi_1) \times \cos(\phi_2) \times \sin^2 (\Delta \lambda /2) \\
 c = 2 \times \arctan( \sqrt(a), \sqrt(1-a) \\
 d = R \times c $
