@@ -31,14 +31,3 @@ def read_cities(filename):
 		data_cities.append([city, float(latitude), float(longitude)])
 	np_data_cities = np.array(data_cities)
 	return np_data_cities
-
-
-if __name__ == "__main__":
-	region_name = "japan"
-	np_data_earth = read_earthquakes(region_name)
-	print np_data_earth
-
-	filename2 = "data/worldcitiespop.csv"
-	np_data_cities = read_cities(filename2)
-	print np_data_cities
-

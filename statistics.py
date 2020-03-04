@@ -8,14 +8,14 @@ def print_array(np_array, name):
 	takes a two-dimensional numpy array and its name and prints the information contained in it.
 	This function takes the following arguments: np_array and its name.
 	"""
-	print 'The name of the two-dimensional array is %s' %name
-	print "Matrix[" + ("%d" %np_array.shape[1]) + "] [" + ("%d" %np_array.shape[0]) + "]"
+	print('The name of the two-dimensional array is %s' %name)
+	print("Matrix[" + ("%d" %np_array.shape[1]) + "] [" + ("%d" %np_array.shape[0]) + "]")
 	for row in np_array:
 		list_row = []
 		for element in row:
 			new_element = str(element)
 			list_row.append(new_element)
-		print "\t|\t".join(list_row)
+		print("\t|\t".join(list_row))
 
 def earthquake_frequency(min_magnitude, max_magnitude, time_start, time_end, list_of_regions, show):
 	"""
@@ -105,7 +105,7 @@ def city_risk(name_city, R, time_start, time_end):
 			latitude_city = float(city[1])
 			longitude_city = float(city[2])
 	if latitude_city == None:
-		print "The city is not in our list"
+		print("The city is not in our list")
 		return 
 	earth_radius = 6371
 	list_distance_earthquake_city = []
@@ -113,9 +113,9 @@ def city_risk(name_city, R, time_start, time_end):
 		latitude_earthquake = row[2]
 		longitude_earthquake = row[3]
 		a = math.sin((latitude_city - latitude_earthquake) / 2)**2 + math.cos(latitude_city) * math.cos(latitude_earthquake) * (math.sin((longitude_city - longitude_earthquake) / 2)**2)
-	 	c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a)) 
-	 	distance = earth_radius * c 
-	 	list_distance_earthquake_city.append(distance)
+		c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+		distance = earth_radius * c
+		list_distance_earthquake_city.append(distance)
 	np_distance_earthquake_city = np.array(list_distance_earthquake_city)
 	comparison_filter = np_distance_earthquake_city <= R 
 	return len(np_distance_earthquake_city[comparison_filter])
@@ -177,7 +177,7 @@ def city_is_safe(name_city, length_stay_days):
 			latitude_city = float(city[1])
 			longitude_city = float(city[2])
 	if latitude_city == None:
-		print "The city is not in our list"
+		print("The city is not in our list")
 		return 
 	earth_radius = 6371
 	list_distance_earthquake_city = []
@@ -185,9 +185,9 @@ def city_is_safe(name_city, length_stay_days):
 		latitude_earthquake = row[2]
 		longitude_earthquake = row[3]
 		a = math.sin((latitude_city - latitude_earthquake) / 2)**2 + math.cos(latitude_city) * math.cos(latitude_earthquake) * (math.sin((longitude_city - longitude_earthquake) / 2)**2)
-	 	c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a)) 
-	 	distance = earth_radius * c 
-	 	list_distance_earthquake_city.append(distance)
+		c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+		distance = earth_radius * c
+		list_distance_earthquake_city.append(distance)
 	np_distance_earthquake_city = np.array(list_distance_earthquake_city)
 	comparison_filter = np_distance_earthquake_city <= 1000
 	date_min = min(np_earthquakes_total_region[:, 0])
@@ -195,32 +195,6 @@ def city_is_safe(name_city, length_stay_days):
 	diff = date_max - date_min
 	average = len(np_distance_earthquake_city[comparison_filter]) / float(diff.days) * length_stay_days
 	return math.exp(-average)
-
-if __name__ == "__main__":
-	k=2
-	min_magnitude = 3
-	max_magnitude = 7
-	time_start = datetime(2018, 04, 19)
-	time_end = datetime(2019, 02, 24)
-	list_of_regions = ['polynesia', 'central_south_america']
-	show = True 
-
-	#earth_freq = earthquake_frequency(min_magnitude, max_magnitude, time_start, time_end, list_of_regions, show)
-	#strongest_earth = strongest_earthquakes(k, time_start, time_end, list_of_regions, show)
-
-	name_city = 'playa hawaii'
-	R = 3000
-
-	#city = city_risk(name_city, R, time_start, time_end)
-	
-	#region = 'south_east_asia'
-	#strong_month = strong_per_month(region)
-	#print strong_month
-	
-	length_stay_days = 21
-	safe = city_is_safe(name_city, length_stay_days)
-	print safe 
-
 	
 
 
