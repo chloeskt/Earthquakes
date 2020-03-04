@@ -26,3 +26,18 @@ We implemented the following functions:
 ![d = R \times c](https://render.githubusercontent.com/render/math?math=d%20%3D%20R%20%5Ctimes%20c)
 
 where ![\phi_1](https://render.githubusercontent.com/render/math?math=%5Cphi_1) and ![\phi_2](https://render.githubusercontent.com/render/math?math=%5Cphi_2) are the latitudes, ![\Delta \lambda](https://render.githubusercontent.com/render/math?math=%5CDelta%20%5Clambda) is the difference between longitutdes and R is the earth's radius. 
+
+## Step 3: Visualize the data 
+
+Again we created various functions to increase our understanding of the data. 
+- barplot
+- piehcart
+2D map of eathquakes 
+
+## Step 4: Risk prevision 
+
+Imagine that you are going on a research mission and your university wants to check the seismic activity around the place where you are going to ensure your safety. The goal was to create a function city_is_safe to help the university. The function returns the probability not to have a strong earthquake during your stay with decimal precision of 6 digits.
+
+## Final step: Creation of a text user interface 
+
+The ultimate goal was to allow users to access all the functions I created. The program displays available options (stats / graphs / prediction), and the suer can pick one of them and then choose among various functions the one that he pleases and wants to get information from. 
