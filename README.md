@@ -2,14 +2,19 @@
 
 This was my first project in Python, done in May 2019 for the course 'Introduction to programming' at École Normale Supérieure de Paris (Ulm). 
 
-## Step 1: Gather the data
+## Step 1: Gather the data 
+In download_data.py
 
 Using BeautifulSoup we select the 25 000 newest earthquakes from http://ds.iris.edu/ieb/index.html, and for each earthquake we store the following fields: year, month, day, time, magnitude, latitude, longitude, depth, region.
 To these features, we add a world cities databased (obtained from https://www.kaggle.com/max-mind/world-cities-database). 
 
+In read_data.py
+
 The goal was then two create functions to read more easily the csv. files and print results in a nice way which allows the user to get a better glance at the data. 
 
 ## Step 2: Statistics on the data 
+
+In statistics.py
 
 We implemented the following functions: 
 
@@ -29,6 +34,8 @@ where ![\phi_1](https://render.githubusercontent.com/render/math?math=%5Cphi_1) 
 
 ## Step 3: Visualize the data 
 
+In graph.py
+
 Again we created various functions to increase our understanding of the data. 
 - barplot
 - piehcart
@@ -36,8 +43,12 @@ Again we created various functions to increase our understanding of the data.
 
 ## Step 4: Risk prevision 
 
+In statistics.py
+
 Imagine that you are going on a research mission and your university wants to check the seismic activity around the place where you are going to ensure your safety. The goal was to create a function city_is_safe to help the university. The function returns the probability not to have a strong earthquake during your stay with decimal precision of 6 digits.
 
 ## Final step: Creation of a text user interface 
+
+In main.py
 
 The ultimate goal was to allow users to access all the functions I created. The program displays available options (stats / graphs / prediction), and the suer can pick one of them and then choose among various functions the one that he pleases and wants to get information from. 
