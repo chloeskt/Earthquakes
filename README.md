@@ -25,9 +25,4 @@ We implemented the following functions:
 
 ![d = R \times c](https://render.githubusercontent.com/render/math?math=d%20%3D%20R%20%5Ctimes%20c)
 
-
-$ a = \sin^2(\Delta \phi / 2) + \cos (\phi_1) \times \cos(\phi_2) \times \sin^2 (\Delta \lambda /2) \\
-c = 2 \times \arctan( \sqrt(a), \sqrt(1-a) \\
-d = R \times c $
-
-where phi_1 and phi_2 are the latitudes, $\Delta \lambda$ is the difference between longitutdes and $R$ is the earth's radius. 
+where ![\phi_1](https://render.githubusercontent.com/render/math?math=%5Cphi_1) and ![\phi_2](https://render.githubusercontent.com/render/math?math=%5Cphi_2) are the latitudes, ![\Delta \lambda](https://render.githubusercontent.com/render/math?math=%5CDelta%20%5Clambda) is the difference between longitutdes and R is the earth's radius. 
